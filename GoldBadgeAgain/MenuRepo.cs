@@ -57,7 +57,7 @@ namespace GoldBadgeAgain
         public bool DeleteMenuItemByName(string name)
         {
             MenuItem targetItem = GetMenuItemByName(name);
-            return DeleteExistingMenuItem(targetItem);
+            return DeleteMenuItem(targetItem);
         }
     }
 }

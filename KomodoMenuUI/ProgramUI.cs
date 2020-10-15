@@ -104,7 +104,7 @@ namespace KomodoMenuUI
             string name = Console.ReadLine();
             MenuItem item = _menuRepo.GetMenuItemByName(name);
 
-            if (name != null)
+            if (item != null)
             {
                 DisplayMenuItem(item);
             }
@@ -119,8 +119,17 @@ namespace KomodoMenuUI
         private void CreateNewMenuItem()
         {
             Console.WriteLine("Enter a number for the meal:  ");
-            int number = int.Parse(Console.ReadLine());
+            var input = Console.ReadLine();
 
+            int newNumber;
+            while(!int.TryParse(input, out newNumber))
+            {
+                Console.WriteLine("Invalid number");
+                input = Console.ReadLine();
+            }
+            int number = newNumber;
+
+                       
             Console.WriteLine("Enter meal name:  ");
             string name = Console.ReadLine();
 

@@ -10,8 +10,8 @@ namespace KomodoMenuUI
     {
         static void Main(string[] args)
         {
-            ProgramUI start = new ProgramUI();
-            start.Start();
+            ProgramUI OpenTheCafe = new ProgramUI();
+            OpenTheCafe.Start();
         }
     }
 }
