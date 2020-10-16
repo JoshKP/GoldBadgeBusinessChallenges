@@ -28,6 +28,17 @@ namespace KomodoMenuUI
             }
         }
 
+        private void SeedData()
+        {
+            MenuItem firstItem = new MenuItem(1, "Rigatoni Funghi Salsiccia", "Homemade Rigatoni, spicy italian sausage and mushrooms tossed in a rich white cream sauce. It's our best seller.", "Rigatoni, Sausage, Mushrooms, Heavy Cream, Onions, Butter, Pancetta.", 18.95);
+            MenuItem secondItem = new MenuItem(2, "Barbatelle", "Beet infused tagliatelle, tossed in a light red wine sauce, figs, prosciutto, carmelized onions and some goat cheese. An amazing vegeterian dish.", "Tagliatelle, beets, figs, prosciutto, goat cheese, onions, butter, red wine.", 17.95);
+            MenuItem thirdItem = new MenuItem(3, "Bolognese", "Tagliatelle pasta tossed in a classic Italian bolognese that we simmer for 5 hours giving it amazing flavors.", "Tagliatelle, tomato, marinara, beef, pork, pancetta, butter, onion.", 17.95);
+
+            _menuRepo.AddItemToMenu(firstItem);
+            _menuRepo.AddItemToMenu(secondItem);
+            _menuRepo.AddItemToMenu(thirdItem);
+        }
+
         private string GetMenuSelection()
         {
             Console.Clear();
@@ -124,11 +135,10 @@ namespace KomodoMenuUI
             int newNumber;
             while(!int.TryParse(input, out newNumber))
             {
-                Console.WriteLine("Invalid number");
+                Console.WriteLine("Invalid number try again");
                 input = Console.ReadLine();
             }
             int number = newNumber;
-
                        
             Console.WriteLine("Enter meal name:  ");
             string name = Console.ReadLine();
@@ -139,8 +149,16 @@ namespace KomodoMenuUI
             Console.WriteLine("Enter meal ingredients:  ");
             string ingredients = Console.ReadLine();
 
-            Console.WriteLine("Enter meal price:  $");
-            double price = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a price for the meal:  $");
+            var priceInput = Console.ReadLine();
+
+            double priceNumber;
+            while (!double.TryParse(priceInput, out priceNumber))
+            {
+                Console.WriteLine("Invalid number try again");
+                priceInput = Console.ReadLine();
+            }
+            double price = priceNumber;
 
             MenuItem newItem = new MenuItem(number, name, description, ingredients, price);
 
@@ -166,7 +184,15 @@ namespace KomodoMenuUI
             }
 
             Console.WriteLine("Enter a number for the meal:  ");
-            int number = int.Parse(Console.ReadLine());
+            var input = Console.ReadLine();
+
+            int newNumber;
+            while (!int.TryParse(input, out newNumber))
+            {
+                Console.WriteLine("Invalid number try again");
+                input = Console.ReadLine();
+            }
+            int number = newNumber;
 
             Console.WriteLine("Enter meal name:  ");
             string name = Console.ReadLine();
@@ -177,8 +203,16 @@ namespace KomodoMenuUI
             Console.WriteLine("Enter meal ingredients:  ");
             string ingredients = Console.ReadLine();
 
-            Console.WriteLine("Enter meal price:  $");
-            double price = double.Parse(Console.ReadLine());
+            Console.WriteLine("Enter a price for the meal:  $");
+            var priceInput = Console.ReadLine();
+
+            double priceNumber;
+            while (!double.TryParse(priceInput, out priceNumber))
+            {
+                Console.WriteLine("Invalid number try again");
+                priceInput = Console.ReadLine();
+            }
+            double price = priceNumber;
 
             MenuItem newItem = new MenuItem(number, name, description, ingredients, price);
 
@@ -216,15 +250,5 @@ namespace KomodoMenuUI
             Console.ReadKey();
         }
 
-        private void SeedData()
-        {
-            MenuItem firstItem = new MenuItem(1, "Rigatoni Funghi Salsiccia", "Homemade Rigatoni, spicy italian sausage and mushrooms tossed in a rich white cream sauce. It's our best seller.", "Rigatoni, Sausage, Mushrooms, Heavy Cream, Onions, Butter, Pancetta.", 18.95);
-            MenuItem secondItem = new MenuItem(2, "Barbatelle", "Beet infused tagliatelle, tossed in a light red wine sauce, figs, prosciutto, carmelized onions and some goat cheese. An amazing vegeterian dish.", "Tagliatelle, beets, figs, prosciutto, goat cheese, onions, butter, red wine.", 17.95);
-            MenuItem thirdItem = new MenuItem(3, "Bolognese", "Tagliatelle pasta tossed in a classic Italian bolognese that we simmer for 5 hours giving it amazing flavors.", "Tagliatelle, tomato, marinara, beef, pork, pancetta, butter, onion.", 17.95);
-
-            _menuRepo.AddItemToMenu(firstItem);
-            _menuRepo.AddItemToMenu(secondItem);
-            _menuRepo.AddItemToMenu(thirdItem);
-        }
     }
 }
