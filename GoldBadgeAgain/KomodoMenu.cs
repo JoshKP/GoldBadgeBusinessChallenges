@@ -8,6 +8,7 @@ namespace GoldBadgeAgain
 {
     public class MenuItem
     {
+        // Constructors
         public MenuItem() { }
         public MenuItem(int number, string name, string description, string ingredients, double price)
         {
@@ -17,6 +18,7 @@ namespace GoldBadgeAgain
             Ingredients = ingredients;
             Price = price;
         }
+
         public int Number { get; set; }
 
         public string Name { get; set; }

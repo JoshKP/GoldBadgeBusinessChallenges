@@ -103,7 +103,7 @@ namespace KomodoRepoTests
         }
 
         [TestMethod]
-        public void DeleteMenutItemByName()
+        public void DeleteMenutItemByName()  // Deleting item by name works
         {
             // Arrange
             Arrange();
