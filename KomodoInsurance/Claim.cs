@@ -9,7 +9,7 @@ namespace KomodoInsurance
     public class Claim
     {
         public Claim() { }
-        public Claim(int id, ClaimType typeOfClaim, string description, double amount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid)
+        public Claim(string id, ClaimType typeOfClaim, string description, double amount, string dateOfIncident, string dateOfClaim)
         {
             ID = id;
             TypeOfClaim = typeOfClaim;
@@ -19,7 +19,7 @@ namespace KomodoInsurance
             ClaimDate = dateOfClaim;
         }
 
-        public int ID { get; set; }
+        public string ID { get; set; }
 
         public enum ClaimType
         {
@@ -31,15 +31,15 @@ namespace KomodoInsurance
 
         public double Amount { get; set; }
 
-        public DateTime IncidentDate { get; set; }
+        public string IncidentDate { get; set; }
 
-        public DateTime ClaimDate { get; set; }
+        public string ClaimDate { get; set; }
 
         public bool IsValid
         {
             get
             {
-                TimeSpan days = ClaimDate - IncidentDate;
+                TimeSpan days = DateTime.Parse(ClaimDate) - DateTime.Parse(IncidentDate);
                 return days.TotalDays <= 30;
             }
         }

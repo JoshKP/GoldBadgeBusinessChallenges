@@ -20,7 +20,7 @@ namespace KomodoInsurance
             _claimDirectory.Enqueue(claim);
         }
 
-        public Claim GetClaimByID(int claimId)
+        public Claim GetClaimByID(string claimId)
         {
             foreach (Claim claim in _claimDirectory)
             {
@@ -32,7 +32,7 @@ namespace KomodoInsurance
             return null;
         }
 
-        public bool UpdateClaim(Claim updatedClaim, int originalClaimId)
+        public bool UpdateClaim(Claim updatedClaim, string originalClaimId)
         {
             Claim claim = GetClaimByID(originalClaimId);
             if (claim != null)
