@@ -11,7 +11,7 @@ namespace KomodoInsuranceTests
     public class UnitTest1
     {
         private ClaimsRepo _repo = new ClaimsRepo();
-        public Queue<Claim> _claimQueue = new Queue<Claim>();
+        private Queue<Claim> _claimQueue = new Queue<Claim>();
         private Claim _claim = new Claim();
         private Claim _claimTwo = new Claim();
 

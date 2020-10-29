@@ -108,27 +108,9 @@ namespace KomodoInsuranceUI
 
             Console.WriteLine("When did incident occur? (YYYY/MM/DD)");
             string incidentDate = Console.ReadLine();
-            //var incident = Console.ReadLine();
-
-            //string dateOfIncident;
-            //while (!DateTime.TryParse(incident, out dateOfIncident))
-            //{
-            //    Console.WriteLine("Invalid date try again");
-            //    incident = Console.ReadLine();
-            //}
-            //var incidentDate = dateOfIncident;
 
             Console.WriteLine("When was claim made? (YYYY/MM/DD)");
             string claimDate = Console.ReadLine();
-            //var claimMade = Console.ReadLine();
-
-            //string dateOfClaim;
-            //while (!DateTime.TryParse(claimMade, out dateOfClaim))
-            //{
-            //    Console.WriteLine("Invalid date try again");
-            //    claimMade = Console.ReadLine();
-            //}
-            //var claimDate = dateOfClaim;
 
             Claim newClaim = new Claim(id, claimType, description, claimAmount, incidentDate, claimDate);
 
@@ -185,25 +167,9 @@ namespace KomodoInsuranceUI
 
             Console.WriteLine("When did incident occur? (YYYY/MM/DD)");
             string incidentDate = Console.ReadLine();
-            //var incident = Console.ReadLine();
-            //DateTime dateOfIncident;
-            //while (!DateTime.TryParse(incident, out dateOfIncident))
-            //{
-            //    Console.WriteLine("Invalid date try again");
-            //    incident = Console.ReadLine();
-            //}
-            //var incidentDate = dateOfIncident;
 
             Console.WriteLine("When was claim made? (YYYY/MM/DD)");
             string claimDate = Console.ReadLine();
-            //var claimMade = Console.ReadLine();
-            //DateTime dateOfClaim;
-            //while (!DateTime.TryParse(claimMade, out dateOfClaim))
-            //{
-            //    Console.WriteLine("Invalid date try again");
-            //    claimMade = Console.ReadLine();
-            //}
-            //var claimDate = dateOfClaim;
 
             Claim updatedClaim = new Claim(id, claimType, description, claimAmount, incidentDate, claimDate);
 

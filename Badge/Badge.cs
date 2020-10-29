@@ -4,19 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Badge
+namespace KomodoBadge
 {
     public class Badge
     {
         public Badge() { }
 
-        public Badge(int id, List<string> doors)
+        public Badge(int id, List<string> roomAccess)
         {
             BadgeID = id;
-            DoorAccess = doors;
+            RoomAccess = roomAccess;
         }
         public int BadgeID { get; set;}
 
-        public List<string> DoorAccess { get; set;}
+        public List<string> RoomAccess { get; set;}
     }
 }
