@@ -11,4 +11,4 @@ claim is valid based on the amount of time between the date of the incident and 
 The third challenge utilizes a Dictionary to manage security access for its employees.  It allows an admin full CRUD control over the badges and also the doors that a badge has access to.
 
 To run a challenge open this solution in Visual Studio and set the corresponding UI file as the Start Up project, i.e. KomodoMenuUI, 
-KomodoInsuranceUI or KomodoBadgeUI.  After that you can interact with the application through the console.
+KomodoInsuranceUI or KomodoBadgeUI.  Next click Start with the green arrow at the top (or press control+F5).  After that you can interact with the application through the console.
