@@ -8,8 +8,7 @@ The first challenge allows a cafe manager to Create, Read, Update, and Delete al
 The second challenge utilizes Queues and full CRUD to catalog insurance claims for its customers and also to determine whether a
 claim is valid based on the amount of time between the date of the incident and the date of the claim.
 
-The third challenge utilizes a Dictionary to manage security access for its employees.  It allows an admin to create, edit and delete
-badges which in turn have access to a customizable list of doors.
+The third challenge utilizes a Dictionary to manage security access for its employees.  It allows an admin full CRUD control over the badges and also the doors that a badge has access to.
 
 To run a challenge open this solution in Visual Studio and set the corresponding UI file as the Start Up project, i.e. KomodoMenuUI, 
 KomodoInsuranceUI or KomodoBadgeUI.  After that you can interact with the application through the console.
